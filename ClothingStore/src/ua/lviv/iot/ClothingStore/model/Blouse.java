@@ -3,8 +3,8 @@ package ua.lviv.iot.ClothingStore.model;
 public class Blouse extends Clothes{
     String colour;
     boolean hasPattern;
-    public Blouse(int price, String colour, String size, boolean hasPattern, boolean isFestive) {
-        super(price, size, isFestive);
+    public Blouse(int price, String colour, String size, boolean hasPattern, boolean isFestive, String brand) {
+        super(price, size, isFestive, brand);
         this.colour = colour;
         this.hasPattern = hasPattern;
     }
@@ -17,6 +17,7 @@ public class Blouse extends Clothes{
                 + ", price = " + price
                 + ", size is " + size
                 + ", isFestive = " + isFestive
+                + ", brand = " + brand
                 + ")";
     }
 
