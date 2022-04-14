@@ -2,6 +2,7 @@ package ua.lviv.iot.ClothingStore;
 
 import ua.lviv.iot.ClothingStore.model.*;
 import ua.lviv.iot.ClothingStore.manager.impl.*;
+
 public class Main {
     public static void main(String[] args) {
 
