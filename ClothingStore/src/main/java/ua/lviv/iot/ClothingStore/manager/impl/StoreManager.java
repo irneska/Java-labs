@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 
 public class StoreManager implements IStoreManager {
 
-    /*private Map<String, List<Clothes>> goodsMap;*/
     private final List<Clothes> clothes = new LinkedList<>();
 
     @Override
@@ -18,13 +17,13 @@ public class StoreManager implements IStoreManager {
         }
     }
 
-
     @Override
     public List<Clothes> findFestiveClothes(boolean isFestive) {
         return clothes.stream()
                 .filter(clothes -> Objects.equals(clothes.getIsFestive(), isFestive))
                 .collect(Collectors.toList());
     }
+
     @Override
     public List<Clothes> getGoodsSortedByBrandGrowing(String brand, boolean isFestive) {
         return clothes.stream()
