@@ -4,13 +4,13 @@ import ua.lviv.iot.ClothingStore.model.Clothes;
 import java.util.List;
 
 public interface IStoreManager {
-    void addGoods(Clothes goods, boolean isFestive);
+    void addGoods(List<Clothes> solmar, Clothes goods);
 
-    List<Clothes> findFestiveClothes(boolean isFestive);
+    List<Clothes> findFestiveClothes(List<Clothes> solmar, boolean isFestive);
 
-    List<Clothes> getGoodsSortedByBrandGrowing(String brand, boolean isFestive);
-    List<Clothes> getGoodsSortedByBrandFallingDown(String brand, boolean isFestive);
+    List<Clothes> getGoodsSortedByBrandGrowing(List<Clothes> solmar, String brand);
+    List<Clothes> getGoodsSortedByBrandFallingDown(List<Clothes> solmar, String brand);
 
-    List<Clothes> getGoodsSortedByPriceFallingDown(int price, boolean isFestive);
-    List<Clothes> getGoodsSortedByPriceGrowing( int price, boolean isFestive);
+    List<Clothes> getGoodsSortedByPriceFallingDown(List<Clothes> solmar);
+    List<Clothes> getGoodsSortedByPriceGrowing(List<Clothes> solmar);
 }
