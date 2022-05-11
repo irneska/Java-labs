@@ -1,10 +1,14 @@
 package ua.lviv.iot.ClothingStore;
 
-import ua.lviv.iot.ClothingStore.model.*;
-import ua.lviv.iot.ClothingStore.manager.impl.*;
+import ua.lviv.iot.ClothingStore.model.Blouse;
+import ua.lviv.iot.ClothingStore.model.Trousers;
+import ua.lviv.iot.ClothingStore.model.Shorts;
+import ua.lviv.iot.ClothingStore.model.Dress;
+import ua.lviv.iot.ClothingStore.model.Clothes;
+import ua.lviv.iot.ClothingStore.manager.impl.StoreWriter;
+import ua.lviv.iot.ClothingStore.manager.impl.StoreManager;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -16,7 +20,7 @@ public class Main {
         Shorts shorts1 = new Shorts(500, "S", false, "Nike");
         Shorts shorts2 = new Shorts(550, "M", true, "Zara");
 
-        Trousers trousers1 = new Trousers(800, "M",  true, "cotton", "straight","Reserved" );
+        Trousers trousers1 = new Trousers(800, "M", true, "cotton", "straight", "Reserved");
         Trousers trousers2 = new Trousers(600, "S", false, "jeans", "Mom", "Zara");
 
         Blouse blouse1 = new Blouse(600, "white", "S", true, true, "Gucci");
@@ -51,17 +55,20 @@ public class Main {
         System.out.println(solmar.findFestiveClothes(clothes, true));
         System.out.println();
         System.out.println("Festive clothes is sorted by brand in ascending order:");
-        System.out.println(solmar.getGoodsSortedByBrandGrowing(clothes,"Zara"));
+        System.out.println(solmar.getGoodsSortedByBrandGrowing(clothes, "Zara"));
         System.out.println();
         System.out.println("Festive clothes is sorted by price in ascending order:");
         System.out.println(solmar.getGoodsSortedByPriceGrowing(clothes));
         System.out.println();
         System.out.println("Festive clothes is sorted by brand in descending order:");
-        System.out.println(solmar.getGoodsSortedByBrandFallingDown(clothes,"Zara"));
+        System.out.println(solmar.getGoodsSortedByBrandFallingDown(clothes, "Zara"));
         System.out.println();
         System.out.println("Festive clothes is sorted by price in descending order:");
         System.out.println(solmar.getGoodsSortedByPriceFallingDown(clothes));
 
+        StoreWriter table = new StoreWriter();
+
+        table.writeCSV(clothes);
 
     }
 }

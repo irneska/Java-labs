@@ -28,14 +28,14 @@ public class StoreManager implements IStoreManager {
                 .filter(clothes -> Objects.equals(clothes.getBrand(), brand))
                 .sorted(Comparator.comparing(Clothes::getBrand))
                 .collect(Collectors.toList());
-        }
+    }
 
-        @Override
-        public List<Clothes> getGoodsSortedByPriceFallingDown(List<Clothes> solmar){
-            return solmar.stream()
-                    .sorted(Comparator.comparing(Clothes::getPrice).reversed())
-                    .collect(Collectors.toList());
-        }
+    @Override
+    public List<Clothes> getGoodsSortedByPriceFallingDown(List<Clothes> solmar) {
+        return solmar.stream()
+                .sorted(Comparator.comparing(Clothes::getPrice).reversed())
+                .collect(Collectors.toList());
+    }
 
     @Override
     public List<Clothes> getGoodsSortedByBrandFallingDown(List<Clothes> solmar, String brand) {
@@ -46,11 +46,11 @@ public class StoreManager implements IStoreManager {
     }
 
     @Override
-    public List<Clothes> getGoodsSortedByPriceGrowing(List<Clothes> solmar){
+    public List<Clothes> getGoodsSortedByPriceGrowing(List<Clothes> solmar) {
         return solmar.stream()
                 .sorted(Comparator.comparing(Clothes::getPrice))
                 .collect(Collectors.toList());
     }
 
-    }
+}
 

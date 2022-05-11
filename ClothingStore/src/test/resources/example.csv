@@ -1,0 +1,10 @@
+price, size, isFestive, brand
+550, M, true, Zara
+price, size, isFestive, brand, colour, hasPattern
+800, M, true, Reserved, cotton, straight
+price, size, isFestive, brand, colour, hasPattern
+600, S, true, Gucci, white, true
+769, M, true, Zara, grey, false
+price, size, isFestive, brand, colour, hasPattern
+600, S, true, Reserved, false, oversize
+1199, S, true, H&M, true, evening gown
