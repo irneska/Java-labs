@@ -12,3 +12,5 @@ In 4th lab I turned a project with code 2-3 work so that it could be built with 
 In the 5th lab I wrote unit tests for the code of my 4th lab.
 
 In the 6th lab I implemented a list of objects present in the manager class in a CSV file. I also added checkstyle and spotbugs plugins to the pom.xml and checked the code with these parsers. Accordingly, it fixed all the errors that spotbugs were found and reduced the number of errors that checkstyle pointed out.
+
+In the 7th lab I wrote a program that counts the number of vowels in each sentence of the text using Java Regex.
