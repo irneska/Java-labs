@@ -26,4 +26,12 @@ public abstract class Clothes {
     public String getBrand() {
         return brand;
     }
+
+    public String getHeaders() {
+        return "price, size, isFestive, brand";
+    }
+
+    public String toCSV() {
+        return String.format("%s, %s, %s, %s", getPrice(), getSize(), getIsFestive(), getBrand());
+    }
 }
